@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Multiple object detection using pre trained model in TensorFlow.js</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jason Mayes">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h1 class="h1">Object Detection</h1>
+
+    <p> Use a webcam, upload a video, or upload images to get real-time classifications! 
+      
+      When ready click "enable webcam" below and accept access to the webcam when the browser asks (check the top left of
+        your window)</p>
+    
+  <div class="min-accuracy-container">
+  <p class="min-accuracy-text" >Set the minimum accurracy of the object detector.<span class="min-accuracy-span"> The object detector will ignore values less than the values displayed here.</span></p>
+    <input class="min-accuracy-input" type="number" id="min-accuracy" name="min-accuracy" min="0" max="100" value="66" />
+  </div>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'streamer-container')" id="defaultOpen">Stream</button>
+        <button class="tablinks" onclick="openTab(event, 'video-player-container')">Video</button>
+        <button class="tablinks" onclick="openTab(event, 'image-prediction-container')">Images</button>
+      </div>
+
+    <div id="streamer-container" class="streamer-container tabcontent">
+        <div class="video-wrapper">
+            <div id="liveView" class="videoView">
+                <button id="webcamButton" class="webcam-btn">Enable Webcam</button>
+                <video id="webcam" autoplay></video>
+            </div>
+        </div>
+        <div class="objects-identified">
+             <h3>Objects Identified:</h3>
+            <ul class="stream-objects-identified-list"></ul>
+        </div>
+    </div>
+
+
+    <div id="video-player-container" class="video-player-container tabcontent">
+        <button id="demo-video-player-btn" class="btn">Demo Video</button>
+                    <button class="upload-video-btn btn">Upload Video</button>
+         <input hidden class="video-file-input" type="file" name="file"/>
+
+
+        <div class="video-player-wrapper">
+            <div id="liveView2" class="videoView">
+                <video crossorigin='anonymous' id="video-player" controls >
+                  <source src="https://static.videezy.com/system/resources/previews/000/008/452/original/Dark_Haired_Girl_Pensive_Looks_at_Camera.mp4"
+                          type="video/mp4"></source>
+                  
+                </video>
+            </div>
+        </div>
+        <div class="objects-identified">
+            <ul class="video-objects-identified-list"></ul>
+        </div>
+    </div>
+
+    <div id="image-prediction-container" class="image-prediction-container tabcontent">
+      <div class="image-grid">
+      <div>
+        <button class="upload-img-btn">Upload Image</button>
+         <input hidden class="file-input" type="file" name="file"/>
+        <div class="image-upload">
+            <img src="#" class="image-upload-viewer"/>
+        </div>
+        </div>
+      <div>
+        <button class="upload-img-btn">Upload Image</button>
+         <input hidden class="file-input" type="file" name="file"/>
+        <div class="image-upload">
+            <img src="#" class="image-upload-viewer"/>
+        </div>
+        </div>
+      <div>
+        <button class="upload-img-btn">Upload Image</button>
+         <input hidden class="file-input" type="file" name="file"/>
+        <div class="image-upload">
+            <img src="#" class="image-upload-viewer"/>
+        </div>
+        </div>
+      <div>
+        <button class="upload-img-btn">Upload Image</button>
+         <input hidden class="file-input" type="file" name="file"/>
+        <div class="image-upload">
+            <img src="#" class="image-upload-viewer"/>
+        </div>
+        </div>
+      </div>
+  </div>
+
+    <div class="page-loader">
+        <h1 class="page-loader-text">Loading...</h1>
+        <div class='loader'>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+    <!-- Import TensorFlow.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js" type="text/javascript"></script>
+
+    <!-- Load the coco-ssd model to use to recognize things in images -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+
+    <!-- Import the page's JavaScript to do some stuff -->
+    <script src="/script.js" defer></script>
+</body>
+
+</html>

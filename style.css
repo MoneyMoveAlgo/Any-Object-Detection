@@ -1,0 +1,397 @@
+
+
+ body {
+    font-family: 'Roboto', sans-serif;
+    margin: 2em;
+    color: #3D3D3D;
+   }
+ 
+ body {
+ /*   background: #222; */
+ }
+ 
+ .loader {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   width: 190px;
+   height: 20px;
+   margin: auto;
+ }
+ .loader span {
+   width: 2px;
+   height: 20px;
+   background-color: #fff;
+   position: absolute;
+   left: 0;
+   transform-origin: center bottom;
+   transform: rotate(-90deg);
+   animation-name: load;
+   animation-duration: 3s;
+   animation-timing-function: ease;
+   animation-iteration-count: infinite;
+ }
+ .loader span:nth-child(1) {
+   left: 9px;
+   animation-delay: 0.05s;
+ }
+ .loader span:nth-child(2) {
+   left: 18px;
+   animation-delay: 0.1s;
+ }
+ .loader span:nth-child(3) {
+   left: 27px;
+   animation-delay: 0.15s;
+ }
+ .loader span:nth-child(4) {
+   left: 36px;
+   animation-delay: 0.2s;
+ }
+ .loader span:nth-child(5) {
+   left: 45px;
+   animation-delay: 0.25s;
+ }
+ .loader span:nth-child(6) {
+   left: 54px;
+   animation-delay: 0.3s;
+ }
+ .loader span:nth-child(7) {
+   left: 63px;
+   animation-delay: 0.35s;
+ }
+ .loader span:nth-child(8) {
+   left: 72px;
+   animation-delay: 0.4s;
+ }
+ .loader span:nth-child(9) {
+   left: 81px;
+   animation-delay: 0.45s;
+ }
+ .loader span:nth-child(10) {
+   left: 90px;
+   animation-delay: 0.5s;
+ }
+ .loader span:nth-child(11) {
+   left: 99px;
+   animation-delay: 0.55s;
+ }
+ .loader span:nth-child(12) {
+   left: 108px;
+   animation-delay: 0.6s;
+ }
+ .loader span:nth-child(13) {
+   left: 117px;
+   animation-delay: 0.65s;
+ }
+ .loader span:nth-child(14) {
+   left: 126px;
+   animation-delay: 0.7s;
+ }
+ .loader span:nth-child(15) {
+   left: 135px;
+   animation-delay: 0.75s;
+ }
+ .loader span:nth-child(16) {
+   left: 144px;
+   animation-delay: 0.8s;
+ }
+ .loader span:nth-child(17) {
+   left: 153px;
+   animation-delay: 0.85s;
+ }
+ .loader span:nth-child(18) {
+   left: 162px;
+   animation-delay: 0.9s;
+ }
+ .loader span:nth-child(19) {
+   left: 171px;
+   animation-delay: 0.95s;
+ }
+ .loader span:nth-child(20) {
+   left: 180px;
+   animation-delay: 1s;
+ }
+ 
+ .h1 {
+   color: #222;
+   font-weight: 900;
+   font-size: 48px;
+ }
+ 
+ @keyframes load {
+   to {
+     transform: rotate(450deg);
+   }
+ }
+   
+ 
+   
+   em {
+     font-weight: bold;
+   }
+   
+   video {
+     clear: both;
+     display: block;
+   }
+   
+   section {
+     opacity: 1;
+     transition: opacity 500ms ease-in-out;
+   }
+   
+   header, footer {
+     clear: both;
+   }
+   
+   .removed {
+     display: none;
+   }
+   
+   .invisible {
+     opacity: 0.2;
+   }
+   
+   .note {
+     font-style: italic;
+     font-size: 130%;
+   }
+  
+   
+ .video-wrapper {
+   display: flex;
+   justify-content: center;
+   background: #eee;
+   padding: 2rem;
+   min-height: 600px;
+ }
+   .videoView{
+     position: relative;
+     cursor: pointer;
+   }
+ 
+    video {
+       padding: 1rem;
+    }
+   
+   .videoView p, .classifyOnClick p {
+     position: absolute;
+     padding: 5px;
+     background-color: rgba(255, 111, 0, 0.85);
+     color: #FFF;
+     border: 1px dashed rgba(255, 255, 255, 0.7);
+     z-index: 2;
+     font-size: 12px;
+     margin: 0;
+   }
+   
+   .highlighter {
+     background: rgba(0, 255, 0, 0.25);
+     border: 1px dashed #fff;
+     z-index: 1;
+     position: absolute;
+   }
+   
+   .classifyOnClick {
+     z-index: 0;
+   }
+   
+   .classifyOnClick img {
+     width: 100%;
+   }
+ 
+ 
+ .page-loader {
+   position: fixed;
+   z-index: 1000;
+   background: #2565ff;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   color: #fff;
+ }
+ 
+ .page-loader-text {
+   position:absolute;
+   top: 30%;
+     font-size: 36px;
+     margin-bttom: 6rem;
+   color: #fff;
+ }
+ 
+ 
+ .video-player-wrapper {
+   background: #eee;
+   padding: 3rem;
+   display: flex;
+   justify-content: center;
+   min-height: 600px;
+ }
+ 
+ .webcam-btn{
+     padding: 1rem 2rem;
+     border: none;
+     border-radius: 3px;
+     background: #2565ff;
+     color: #fff;
+     font-size: 1.25rem;
+     cursor: pointer;
+ }
+ 
+ 
+ 
+ /*  Min Accuracy */
+ 
+ .min-accuracy-container {
+   margin: 3rem 0;
+ }
+ 
+ .min-accuracy-input{
+   padding: 1rem 0.25rem;
+   font-size: 2rem;
+ }
+ 
+ .min-accuracy-text {
+   font-size: 1.25rem;
+ }
+ 
+ .min-accuracy-span {
+   
+ }
+ 
+ 
+ 
+ 
+ 
+ /* Tabs */
+ /* Style the tab */
+ .tab {
+     overflow: hidden;
+     border: 1px solid #ccc;
+     background-color: #f1f1f1;
+   }
+   
+   /* Style the buttons that are used to open the tab content */
+   .tab button {
+     background-color: inherit;
+     float: left;
+     border: none;
+     outline: none;
+     cursor: pointer;
+     padding: 14px 16px;
+     transition: 0.3s;
+   }
+   
+   /* Change background color of buttons on hover */
+   .tab button:hover {
+     background-color: #ddd;
+   }
+   
+   /* Create an active/current tablink class */
+   .tab button.active {
+     background-color: #ccc;
+   }
+   
+   /* Style the tab content */
+   .tabcontent {
+     display: none;
+     /* padding: 6px 12px; */
+     border: 1px solid #ccc;
+     border-top: none;
+   }
+ 
+   .tabcontent {
+     animation: fadeEffect 1s; /* Fading effect takes 1 second */
+   }
+   
+   /* Go from zero to full opacity */
+   @keyframes fadeEffect {
+     from {opacity: 0;}
+     to {opacity: 1;}
+   }
+ 
+ 
+ 
+ /* Image grid */
+ 
+ .image-grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-column-gap: 3rem;
+   grid-row-gap: 3rem;
+   padding: 2rem;
+ }
+ 
+ .image-upload {
+   height: 500px;
+   width: 500px;
+   background: #222;
+   position: relative;
+ 
+ }
+ 
+ .image-upload-viewer {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+ }
+ 
+ .prediction-text {
+   z-index: 111;
+   position: absolute;
+ }
+   
+   
+   .upload-img-btn {
+     background: #2565ff;
+     color: #fff;
+     padding: 1rem 2rem;
+     margin: 1rem 0;
+     border: none;
+     border-radius: 3px;
+     cursor: pointer;
+     font-size: 1rem;
+   }
+ 
+ .btn {
+     background: #2565ff;
+     color: #fff;
+     padding: 1rem 2rem;
+     margin: 1rem 0;
+     border: none;
+     border-radius: 3px;
+     cursor: pointer;
+     font-size: 1rem;
+ }
+ 
+ .image-upload-viewer {
+   display: none;
+ }
+ 
+ 
+ ul {
+   list-style: none;
+   margin: 1rem 0;
+ }
+ 
+ .objects-identified {
+   padding: 1rem;
+ }
+ 
+ .object-identified-li {
+   padding: 0.5rem;
+   margin: 0.5rem 0;
+   text-transform: capitalize;
+ }
